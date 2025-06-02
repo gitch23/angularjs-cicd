@@ -44,7 +44,7 @@ jobs:
         with:
           host: ${{ secrets.AWS_EC2_HOST }}
           username: ${{ secrets.AWS_EC2_USER }}
-          key: ${{ secrets.AWS_SSH_KEY }}
+          key: ${{ secrets.AWS_PRIVATE_KEY }}
           script: |
             docker pull <ECR_URL>/my-app:latest
             docker run -d -p 80:80 <ECR_URL>/my-app:latest
